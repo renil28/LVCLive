@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Live Virtual Class</title>
+</head>
+<style>
+    footer{
+        text-align: center;
+        background-color: black;
+        height: 60px;
+        margin-top: auto;
+        color: aliceblue;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+    }
+
+    nav{
+        text-align: center;
+    }
+    nav ul li{
+        display: inline;
+        margin: 10px;
+        
+    }
+
+    a{
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: darkblue;
+    }
+
+    header{
+        background-image: url(./images/virtualclassroom.jpg);
+        height: 200px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    img{
+        width: 300px;
+        height: 150px;
+        margin: 20px;
+        margin-left: 45px;
+        border: 1px solid #555;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    @keyframes color-change {
+     0% { color: rgb(30, 0, 255); }
+    50% { color: rgb(9, 9, 24); }
+    100% { color:rgb(30, 0, 255)  ;}
+}
+   .semisepia{
+    filter: sepia(30%);  }
+
+    .fullsepia{
+        filter: sepia(100%);
+    }
+
+    .semiopacity{
+        filter: opacity(70%);
+    }
+
+    .fullopacity{
+       filter: opacity(10%);
+    }
+
+    .imageshad1{
+        filter: drop-shadow(4px 4px 4px #ea7c7c);
+    }
+
+    .imageshad2{
+        filter: drop-shadow(4px 4px 4px #0211b2);
+    }
+
+    .blurred{
+        filter: blur(5px);
+    }
+
+    .table{
+   display: block !important;
+   overflow-x: auto !important;
+   width: 100% !important;
+ }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 991px) {
+    footer{
+        text-align: center;
+        background-color: black;
+        height: 60px;
+        margin-top: auto;
+        color: aliceblue;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    @keyframes color-change {
+     0% { color: rgb(30, 0, 255); }
+     50% { color: rgb(9, 9, 24); }
+    100% { color:rgb(30, 0, 255)  ;}
+}
+}
+</style>
+<body>
+    <div>
+    <header>
+        <h1 style="padding: 75px; text-align: center;  animation: color-change 3s infinite;">Live Virtual Class</h1>
+    </header>
+    <div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="courses.html">All Courses</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Registration</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="gallery.html">Gallery</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Other
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="result.html">LVC Result</a></li>
+                      <li><a class="dropdown-item" href="livetest.html">LVC Sample Test</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="map.html">Contact Us</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                  </li>
+                </ul>
+                <button type="button" onclick="sub()" class="btn btn-danger">Subscribe
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                      </svg>
+                </button>
+              </div>
+            </div>
+          </nav>
+    </div>
+    <section>
+    <h1 style="text-align: center;text-shadow: 5px 5px 5px #555;">Gallery</h1>
+    <div class="table-responsive">
+       <table class="table table-borderless">
+        <tr>
+            <td><img src ="./images/1.jpg"><p style="text-align: center; margin-top: -13px; font-size: small;">Normal Image</p></td>
+            <td><img class ="semisepia"src="./images/2.jpg"><p style="text-align: center; margin-top: -13px; font-size: small;">Semi Sepia</p></td>
+            <td><img class="fullsepia"src="./images/3.jpg"><p style="text-align: center; margin-top: -13px; font-size: small;">Full Sepia</p></td>
+        </tr>
+        <tr>
+            <td><img src ="./images/4.jpg"><p style="text-align: center; margin-top: -13px; font-size: small;">Normal Image</p></td>
+            <td><img class="semiopacity" src="./images/5.jpg"><p style="text-align: center; margin-top: -13px; font-size: small;">Semi Opacity</p></td>
+            <td><img class="fullopacity" src="./images/6.jpg"><p style="text-align: center; margin-top: -13px; font-size: small;">Full Opacity</p></td> 
+        </tr>
+        <tr>
+            <td><img class="blurred" src ="./images/2.jpg"><p style="text-align: center; margin-top: -13px; font-size: small;">Blurred Image</p></td>
+            <td><img class="imageshad1" src="./images/4.jpg"><p style="text-align: center; margin-top: -13px; font-size: small;">Image with Shadow 1</p></td>
+            <td><img class="imageshad2" src="./images/3.jpg"><p style="text-align: center; margin-top: -13px; font-size: small;">Image with Shadow 2</p></td> 
+        </tr>
+       </table>
+    </div>
+    </section>
+    <footer>
+        <p>Designed & Developed by:  Renil Justin</p>
+    </footer>
+    </div>
+</body>
+</html>

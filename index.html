@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./js/validate.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Virtual Class</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        text-align: center;
+    }
+    nav ul li{
+        display: inline;
+        margin: 10px;
+    }
+
+    a{
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: darkblue;
+    }
+
+    header{
+        background-image: url(./images/virtualclassroom.jpg);
+        height: 200px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    img{
+        width: 300px;
+        height: 150px;
+        margin: 45px;
+        margin-left: 45px;
+        border: 1px solid #555;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .myCan{
+    margin-left: 450px;
+}
+
+.vid{
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 768px) {
+    footer{
+        text-align: center;
+        background-color: black;
+        height: 60px;
+        margin-top: auto;
+        color: aliceblue;
+        position: absolute;
+        bottom: -200px;
+        width: 100%;
+    }    
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 991px) {
+    footer{
+        text-align: center;
+        background-color: black;
+        height: 60px;
+        margin-top: auto;
+        color: aliceblue;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    @keyframes color-change {
+     0% { color: rgb(30, 0, 255); }
+    50% { color: rgb(9, 9, 24); }
+    100% { color:rgb(30, 0, 255)  ;}
+}
+
+.myCan{
+    margin-left: 50px;
+}
+
+.vid{
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 992px) {
+    footer{
+        text-align: center;
+        background-color: black;
+        height: 60px;
+        margin-top: auto;
+        color: aliceblue;
+        position: absolute;
+        bottom: -770px;
+        width: 100%;
+    }
+
+      @keyframes color-change {
+     0% { color: rgb(30, 0, 255); }
+    50% { color: rgb(9, 9, 24); }
+    100% { color:rgb(30, 0, 255)  ;}
+}
+
+}
+</style>
+<body onload="">
+    <div>
+    <header>
+        <h1 style="padding: 75px; text-align: center;  animation: color-change 3s infinite;">Live Virtual Class</h1>
+    </header>
+    <div>
+        <!-- With Bootstrap -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="courses.html">All Courses</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="registration.html">Registration</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Other
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="result.html">LVC Result</a></li>
+                      <li><a class="dropdown-item" href="livetest.html">LVC Sample Test</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="map.html">Contact Us</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                  </li>
+                </ul>
+                <button type="button" onclick="sub()" class="btn btn-danger">Subscribe
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                      </svg>
+                </button>
+              </div>
+            </div>
+          </nav>
+    <!-- Without Bootstrap
+    <nav> 
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">All Courses</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="result.html">LVC Result</a></li>
+            <li><a href="map.html">Contact Us</a></li>
+            <li><button type="button" onclick="sub()" class="btn btn-danger">Subscribe
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                  </svg>
+            </button></li>
+        </ul>
+    </nav>
+    -->
+    </div>
+    <section>
+        <article>
+            <canvas class="myCan" id="myCanvas" width="800" height="100">
+                Your browser does not support the HTML5 canvas tag.</canvas>
+        </article>
+     <article>
+        <div class ="vid">
+         <iframe width="580" height="326" src="https://www.youtube.com/embed/DQ-1zhFXiJU" title="The Virtual Classroom: Online Learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         <p style="font-size: small;">Live Virtual Class - An Overview</p>
+        </div>
+    </article>
+      <article>
+        &nbsp;
+        <h3 style="margin-left: 45px; ">Welcome to the Website!</h3>
+        <p style="margin-left: 45px;">Here you can browse, register and attend different courses. The Virtual Class provides knowledge regarding Tech Development and improves the knowledge of professionals without any hassle. Register Now!</p>
+      </article>
+      <br>
+      <h2 style="text-align: center;">Most Popular Courses</h2>
+      <article>
+        <div id="carouselExample" class="carousel slide w-50 mx-auto">
+            <div class="carousel-inner">
+              <div class="carousel-item">
+                <img src="./images/mean.jpg" class="d-block w-100 mx-auto" alt="...">
+              </div>
+              <div class="carousel-item active">
+                <img src="./images/mern.jpg" class="d-block w-100 mx-auto" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="./images/mevn.jpg" class="d-block w-100 mx-auto" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </article>
+      <article>
+        <div class=" position-absolute top-25 start-50 translate-middle">
+          <label for="exampleDataList" class="form-label">Check Course Details:</label>
+        <form class="d-inline-flex p-2 bd-highlight" role="search">
+        <select class="form-control form-select "  name="drop" id="drop" onchange="sel()">
+            <option value="0">Select Course</option>
+            <option value="1">MEAN</option>
+            <option value="2">MERN</option>
+            <option value="3">MEVN</option>
+        </select>
+        </form>
+      </article>
+    </div>
+    <br><br>
+      <article>
+        <p style="margin-left: 45px;"> Once a developer knows one of these 3 stacks, it won’t be too difficult to learn the others. All of these stacks are useful – it just depends on the type of project you’re taking on. 
+            If a developer or team prefers to work with Angular, they may choose to work with the MEAN stack. Meanwhile, a developer or team who enjoys working with React will gravitate towards MERN. 
+
+            MEAN stack vs. MERN stack vs. MEVN stack… which one is best? These stacks are all very similar, which is why we only teach one to Kenzie Software Engineering learners. Once a developer knows one of these 3 stacks, it won’t be too difficult to learn the others. All of these stacks are useful – it just depends on the type of project you’re taking on. 
+            In short, one isn’t necessarily better than another.</p>
+      </article>
+    </section>
+    <br>
+    <footer>
+        <p>Designed & Developed by:  Renil Justin</p>
+    </footer>
+    </div>
+</body>
+<script>
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+    ctx.font="20px Arial black";
+    ctx.strokeText("What is Live Virtual Class?",0,70);
+</script>
+</html>
