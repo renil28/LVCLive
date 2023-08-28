@@ -9,8 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <style>
-    body{
-        overflow-x: hidden;
+  footer{
+        text-align: center;
+        background-color: black;
+        height: 60px;
+        color: aliceblue;
+       
     }
     nav{
         text-align: center;
@@ -50,31 +54,9 @@
     text-align: center;
 }
 
-
-@media only screen and (min-width: 768px) {
-    footer{
-        text-align: center;
-        background-color: black;
-        height: 60px;
-        margin-top: auto;
-        color: aliceblue;
-        position: absolute;
-        bottom: -200px;
-        width: 100%;
-    }    
-}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 991px) {
-    footer{
-        text-align: center;
-        background-color: black;
-        height: 60px;
-        margin-top: auto;
-        color: aliceblue;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
+ 
 
     @keyframes color-change {
      0% { color: rgb(30, 0, 255); }
@@ -84,6 +66,7 @@
 
 .myCan{
     margin-left: 50px;
+    overflow-x: hidden;
 }
 
 .vid{
@@ -93,21 +76,12 @@
 
 
 
+
 }
 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 992px) {
-    footer{
-        text-align: center;
-        background-color: black;
-        height: 60px;
-        margin-top: auto;
-        color: aliceblue;
-        position: absolute;
-        bottom: -770px;
-        width: 100%;
-    }
 
       @keyframes color-change {
      0% { color: rgb(30, 0, 255); }
@@ -117,7 +91,7 @@
 
 }
 </style>
-<body onload="">
+<body>
     <div>
     <header>
         <h1 style="padding: 75px; text-align: center;  animation: color-change 3s infinite;">Live Virtual Class</h1>
@@ -169,29 +143,16 @@
               </div>
             </div>
           </nav>
-    <!-- Without Bootstrap
-    <nav> 
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="courses.html">All Courses</a></li>
-            <li><a href="registration.html">Registration</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="result.html">LVC Result</a></li>
-            <li><a href="map.html">Contact Us</a></li>
-            <li><button type="button" onclick="sub()" class="btn btn-danger">Subscribe
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
-                  </svg>
-            </button></li>
-        </ul>
-    </nav>
-    -->
     </div>
     <section>
+      <h1 style="text-align: center;text-shadow: 5px 5px 5px #555;">Home</h1>
+      <br>
+      <!--
         <article>
             <canvas class="myCan" id="myCanvas" width="800" height="100">
                 Your browser does not support the HTML5 canvas tag.</canvas>
         </article>
+        -->
      <article>
         <div class ="vid">
          <iframe width="580" height="326" src="https://www.youtube.com/embed/DQ-1zhFXiJU" title="The Virtual Classroom: Online Learning" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -252,7 +213,7 @@
     </section>
     <br>
     <footer>
-        <p>Designed & Developed by:  Renil Justin</p>
+        <p>Designed & Developed by: Renil Justin</p>
     </footer>
     </div>
 </body>
